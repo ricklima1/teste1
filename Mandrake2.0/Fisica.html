@@ -1,0 +1,180 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title> Formulario </title>
+
+<link rel="stylesheet" href= "Mandrake.css" type="text/css" >
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
+      <script src="jquery.mask.js"></script>
+      <script src="jquery.mask.min.js"></script>
+      <script src="jquery.min.js"></script>
+
+<script>
+        //Máscara CPF
+        $(document).ready(function(){
+          $('#CPF').mask('999.999.999-99');
+        });
+</script>
+
+</head>
+<body>
+    
+<ul>
+    
+  <li><a href="Mandrake1.html"> <img src="LogoMandrake.png" height="65" width="65" > </a></li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">DEPARTAMENTOS</a>
+    <div class="dropdown-content">
+      <a href="Casas.html">IMÓVEIS</a>
+      <a href="Decora%C3%A7%C3%B5es.html">INTERIORES</a>
+    </div>
+  <li><a href="QuemSomos.html">QUEM SOMOS?</a></li>
+  <li class="dropdown" style="float:right">
+    <a href="javascript:void(0)" class="dropbtn">FALE CONOSCO</a>
+    <div class="dropdown-content">
+      <a href="formulario.html">PESSOA JURIDÍCA</a>
+      <a href="Fisica.html">PESSOA FÍSICA</a>
+      </div>
+    
+</ul>
+    
+
+    
+<div id="Page">
+  
+  <center>
+                <form class="formulario" method="POST" action="pagina.php" onsubmit="return checkForm(this);">
+                    <fieldset>
+<form action="http://formmail.kinghost.net/formmail.cgi" method="POST">
+    
+   
+ 
+                          <p>Envie sua dúvida para nossos corretores</p>
+                          
+<div class="field">      
+    
+   <p> 
+   Nome:<br/> 
+   <input type="text" required min="3" title="Nome Completo. Exemplo: Ana Da Silva" placeholder="Ex: Ana da Silva" name="nome" pattern="([A-ZÀ-Ú]{1})([a-zà-ú]{2,})(([\s]{1}[A-ZÀ-Ú]{1})([a-zà-ú]{1,}))+" size="40">
+   </p>   
+    
+</div>
+                          
+                          
+<div class="field"> 
+    
+   <p>
+   E-mail:<br/> 
+   <input type="email" required="required" value="" placeholder="Ex: nome@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" / >
+   </p>   
+    
+</div>
+    
+<div class="field">      
+    
+   <p> 
+   CPF:<br/> 
+    <input type="text" name="CPF" id="CPF" required placeholder="Ex: XXX.XXX.XXX-XX" title="Digite o CPF no seguinte formato: XXX.XXX.XXX-XX" size="40">
+   </p>   
+    
+</div>
+                          
+                          
+<div class="field">
+    
+    <p> 
+    <label for="telefone"> Telefone: </label>
+    <input type="text" id="telefone" type="tel" placeholder="Ex: (XX) X XXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" / >
+    <script type="text/javascript">$("#whatsapp").mask("(00) 00000-0009");</script>
+    </p>   
+    
+</div>
+                          
+                          
+<div class="field">      
+                   
+    <p>
+    Comentário:<br/> 
+    <textarea name="mensage" id="mensagem"  name="Comentarios" placeholder="Sua mensagem" size="500"> 
+     </textarea>
+    </p>
+                          
+</div>
+                          
+ </form>
+                    </fieldset>
+                    <p><input type="submit"/></p>
+                </form>
+         </center>
+         
+</div>
+        
+    <br> <br>
+
+    <div id="rodape">
+        <p> Nos encontre também em: </p>
+        <img src="1b2ca367caa7eff8b45c09ec09b44c16-logotipo-do---cone-do-instagram-by-vexels.png" height="75" width="75"/> @MandrakeDI
+        <br>
+        <img src="1024px-Facebook_Logo_(2019).png" height="70" width="70"/> Mandrake Designer e Imobiliária
+        <img src="609803.png" height="70" width="70"/> Rua Capivari 502, Vasconcelos SCS
+    </div>
+
+        <script type="text/javascript">
+        function checkForm(form)
+        {
+            if(form.CPF.value != ""){
+                var numero = form.CPF.value.replace(/[^0-9]/g,'');
+                var i, soma, dig, resto, dv1, dv2;
+                dv1 = parseInt(numero.substring(9,10));
+                dv2 = parseInt(numero.substring(10,11));
+                soma = 0;
+                i = 0;
+                for(i = 0; i < numero.length-2; i++){
+                    soma = soma + (parseInt(numero.substring(i,i+1))*(10-i));
+                }
+                resto = soma % 11;
+                if(resto == 0 || resto ==1) 
+                    dig = 0;
+                else 
+                    dig = 11 - resto;
+                if(dig == dv1){
+                    soma = 0;
+                    for(i = 0; i < numero.length-1; i++){
+                        soma = soma + (parseInt(numero.substring(i,i+1))*(11-i));
+                    }
+                    resto = soma % 11;
+                    if(resto == 0 || resto ==1) dig = 0;
+                    else dig = 11 - resto;
+                    if(dig != dv2){
+                        alert("CPF Inválido!");
+                        form.CPF.focus();
+                        return false;
+                    }
+                }else{
+                    alert("CPF Inválido!");
+                    form.CPF.focus();
+                    return false;
+                }
+                if(numero == "11111111111" || numero == "22222222222" || numero == "33333333333" || numero == "44444444444" || numero == "55555555555" || numero == "66666666666" || numero == "77777777777" || numero == "88888888888" || numero == "99999999999" || numero == "00000000000" ){
+                    alert("CPF Inválido\nEntre em contato com a Receita Federal!");
+                    return false;
+                }
+            }
+            if(form.pwd1.value != form.pwd2.value) {                
+                alert("Senhas não conferem!\nVerifique as senhas e tente novamente!");
+                form.pwd1.focus();
+                return false;                
+            }
+            return true;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+#cabecalho {
+    background-image: url(depositphotos_118191368-stock-photo-athletic-shoes-on-a-shelf.jpg);
+    width: 96%;
+    padding: 50px 2%;
+    color: white;
+    text-align: center;
+}
+
+body {background-color: wheat;
+}
+
+img {
+         border: 5px solid darkred;
+         border-radius: 40%;
+         padding: 10px;
+         width: 150px;
+         box-shadow: 5px 5px 20px #000000;
+}
+
+#Produtos {
+    width: 96%;
+    padding: 10px 2%;
+}
+div.box {
+	width: 150px;
+	display: inline-block;
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 30px;
+}
+h5 {
+    font-size: 30px;
+}
+
+p {
+   font-size: 25px;
+}

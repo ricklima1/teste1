@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title> Agendar visita </title>
+
+<link rel="stylesheet" href= "Mandrake.css" type="text/css" >
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+    
+<nav>
+    
+  <li><a class="active" href="Mandrake1.html"> <img src="LogoMandrake.png" height="65" width="65" > </a></li>
+   <li><a href="Casas.html">IMÓVEIS</a></li>
+    <li><a href="Decora%C3%A7%C3%B5es.html">INTERIORES</a></li>
+  <li><a href="QuemSomos.html">QUEM SOMOS?</a></li>
+  <li class="dropdown" style="float:right">
+    <a href="javascript:void(0)" class="dropbtn">FALE CONOSCO</a>
+      <div class="dropdown-content">
+        <a href="FisicaV01.html">PESSOA FÍSICA</a>
+        <a href="formulario.html">PESSOA JÚRIDICA</a>
+      </div>
+    </li>
+    
+    </nav>
+    <div id="Page">
+  
+  <center>
+                <form class="formulario_reservas" accept-charset="utf-8" action="form.php" method="POST">
+                    <fieldset>
+
+    
+   
+ 
+                          <h1>Agende sua visita</h1>
+                          
+                        
+                       <div class="field">
+        <p>
+     Casa/Bairro:
+            <br>
+        <select name="casa"> 
+            <option value="santa paula">Santa Paula</option> 
+            <option value="fundação">Fundação</option> 
+            <option value="ceramica">Cerâmica</option> 
+            <option value="nova gerty">Nova Gerty</option> 
+            </select>
+        </p>
+     </div> 
+<div class="field">      
+    <br>
+   <p> 
+       Nome: 
+   <input type="text" required min="3" title="Insira seu nome completo. Exemplo: Ana da Silva" placeholder="Ex: Ana da Silva" name="nome" pattern="([A-ZÀ-Ú]{1})([a-zà-ú]{2,})(([\s]{1}[A-ZÀ-Ú]{1})([a-zà-ú]{1,}))+" size="40">
+   </p>   
+    
+</div>
+     <div class="field">
+        <p>
+       Email: <br>
+            <input type="email" required="required" title="Digite seu email para entarmos em contato" value="" placeholder="Ex: nome@email.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" / >
+        </p>
+        </div>
+                        
+<div class="field"> 
+    <p> 
+   Data para visita<br>
+       <input type="date" required="required" name="datavisita"><br>
+    </p>
+ </div>
+                        
+    <div class="field">
+        <p>
+     Horário:
+            <br>
+        <select name="horario"> 
+            <option value="seis">6:00</option> 
+            <option value="dez">10:00</option> 
+            <option value="catorze">14:00</option> 
+            <option value="dezoito">18:00</option> 
+            <option value="vinteduas">22:00</option>  
+            </select>
+        </p>
+    </div>
+                        
+    <div class="field">
+        <p>
+     Corretores:
+            <br>
+        <select name="corretores"> 
+            <option value="corretores">Nenhuma preferência</option> 
+            <option value="roberta">Roberta</option> 
+            <option value="santos">Gabriel Santos</option> 
+            <option value="lima">Henrique Lima</option> 
+            <option value="marques">Henrique Marques</option> 
+            <option value="joao">João Vitor</option> 
+            </select>
+        </p>
+     </div>
+                    </fieldset>
+                    <input class="btn" type="submit" value="Enviar"onclick="myFunction()"><br>
+      </form>
+        </center>
+    </div>
+    
+    <br><br>
+    
+    <div id="rodape">
+        <strong><p>Trabalho escolar</p></strong>
+        <p>EME Prof.ª Alcina Dantas Feijão</p>
+        <br>
+        <p> Nos encontre também em: </p>
+    <br>
+        <div id="centro">
+<div class = "grid-container">
+    <div><p align = "right"><img src="1b2ca367caa7eff8b45c09ec09b44c16-logotipo-do---cone-do-instagram-by-vexels.png" height="75" width="75"/> @MandrakeDI</p></div>
+    <div><p align = "left"><img src="1024px-Facebook_Logo_(2019).png" height="70" width="70"/> Mandrake Designer e Imobiliária</p>
+        </div>
+    <div> <p align = "right"> <img src="twitter-logo-2-1.png" height="70" width="70"/> @MandrakeDI</p></div>
+    <div> <p align = "left"><img src="609803.png" height="70" width="70"/> Rua Capivari 502, Vasconcelos SCS</p></div>  
+    
+        </div>
+</div>
+    </div>
+    </body>
+</html>
+    
+    
+    
+    
+    
+    
+     
+      
+
+   

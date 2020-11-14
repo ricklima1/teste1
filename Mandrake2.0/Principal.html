@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title> Mandrake </title>
+
+<link rel="stylesheet" href= "Mandrake.css" type="text/css" >
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+    
+<ul>
+    
+  <li><a class="active" href="Principal.html">Principal</a></li>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Loja</a>
+    <div class="dropdown-content">
+      <a href="Casas.html">Residéncias</a>
+      <a href="Decora%C3%A7%C3%B5es.html">Design</a>
+    </div>
+  <li><a href="QuemSomos.html">Quem Somos?</a></li>
+  <li><a href="#contact">Fale Conosco</a></li>
+  <li><img src="Logo.jpeg"></li>
+    
+</ul>
+    
+
+<div class="w3-content w3-display-container">
+<div class="w3-display-container mySlides">
+    
+  <a href="Decora%C3%A7%C3%B5es.html">
+      
+  <img src="papel de parede post 1.jpg" style="width:100%">
+      
+  </a>
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Design de Interiores
+  </div>
+</div>
+<div class="w3-display-container mySlides">
+    
+  <a href="Casas.html">
+      
+  <img src="corretora-dominus-seguro-residencial.jpg" style="width:100%">
+      
+  </a>
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Residéncias
+  </div>
+</div>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    
+</div>
+        <h2></h2>
+        
+        <p1> Esta pensando em comprar uma nova residência? ou ja comprou uma e nâo sabe como decora-la? ligue para mandrake design imobiliaria, nós resolveremos os seus problema. Somos uma corretora de imóveis ( residênciais e comerciais) mas com uma ideia diferente proposta por esse mercado. Além de vender imóveis, também realizamos, se for de interesse do cliente, a parte da decoração e design do imóvel com venda de imóveis, azulejos, pisos, papéis de parede, cortinas e muito mais. </p1>
+    <br> <br>
+    <img src="ezgif.com-video-to-gif (1).gif">
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+    </body>
+</html>
